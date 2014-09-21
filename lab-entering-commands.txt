@@ -1,4 +1,4 @@
-Lab - Entering Commands
+Lab - Navigating the File System
 ==========
 Follow the instructions line-by-line.  
 
@@ -7,160 +7,325 @@ Follow the instructions line-by-line.
 * "No output" or "nothing happens" are valid answers to any of the questions.
 ==========
 
-
-
 ==========
-1. Open Terminal.  Type:
-
-$ ls<ENTER>
-
-Copy and paste the output of ls below.
-----------
-Applications	Documents	Library		Music		Public
-Desktop		Downloads	Movies		Pictures	Sites
-
-
-==========
-2a. Type: 
-
-$ ls D<TAB>
-
-What happens?  Describe it below.
+1. Open a new terminal window.
 ----------
 
-nothing happens
-
 ==========
-2b. Press <TAB> one more time.  Copy and paste the output below.
+2. Create a directory called mtec1002.
 ----------
 
-Desktop/   Documents/ Downloads/
-
 ==========
-2c. Now press <ENTER>. Copy and paste the output below.
-----------
-No such file or directory
-
-==========
-3.  Type:
-
-$ ls -l Documents<ENTER>
-
-Copy and paste the first *two lines* of output below.
-----------
-About Stacks.pdf
-Adobe
-
-==========
-4.  Type:
-
-$ ls -a Documents
-
-Copy and paste the first *two lines* of output below.
+3. Change your directory so that you're in mtec1002.
 ----------
 
-.			About Stacks.pdf	RDC Connections
-..			Adobe
-
-
 ==========
-5.  Type:
+4. Type:
 
-<UP><ENTER>
+$ pwd
 
-What command was repeated?
+Check that the output ends with mtec1002 (something like this: /Users/joe/mtec1002).
+
+If it doesn't start at #1 again, or ask for help before moving on!
+
+Copy and paste the output of pwd below.
 ----------
+/Users/macuser/mtec1002
+tiggys-macbook:mtec1002 macuser$ 
+tiggys-macbook:mtec1002 macuser$ 
 
--a Documents
 
 ==========
-6.  Type:
+5. Type:
 
-<UP><UP><UP><DOWN><ENTER>
+$ mkdir animals
+$ ls
 
-What command was repeated?
+Copy and paste the output below.
 ----------
-
--a Documents
-
-==========
-7.  Type:
-
-$ ls /Vol<TAB><ENTER>
-
-What is the result of pressing tab?
-----------
-
-Mac HD
+animals
+tiggys-macbook:mtec1002 macuser$ 
 
 ==========
-8.  Type:
+6. Type:
 
-$ ls doesnotexist
+$ mkdir food
+$ ls
 
 Copy and paste the output below.
 ----------
 
-No such file or directory
-Tiggys-MacBook:~ macuser$ 
-Tiggys-MacBook:~ macuser$ 
-
+tiggys-macbook:food macuser$ 
 
 ==========
-9.  What key do I press to go to the previous command?
-----------
+7. Type:
 
-up
-
-==========
-10.  Name two flags that we used in this exercise.
-----------
--_
-
-
-==========
-11.  What key do I use to attempt to autocomplete a command or a file name?
-----------
-
-<tab>
-
-==========
-12.  What was the main command that we used throughout this exercise?
-----------
-
-
-ls
-==========
-13.  Name one argument that we passed to the command.
-----------
-
-Documents
-
-==========
-14.  Type:
-
-$ foo<ENTER>
+$ mkdir -p foo/bar/baz/qux
+$ ls
 
 Copy and paste the output below.
 ----------
+foo
 
-command not found
+
 
 ==========
-15.  Type:
+8. Type:
 
-<UP><ENTER>
+$ cd foo/bar/baz/qux
+$ pwd
 
 Copy and paste the output below.
 ----------
+/Users/macuser/mtec1002/food
+tiggys-macbook:food macuser$ 
 
-command not found
 
 ==========
-16.  In the following line....
+9. Type:
 
-$ ls -a Desktop
+$ cd ../..
+$ pwd
 
-What is the command, flag, argument, and prompt?
+Copy and paste the output below.
 ----------
-directories 
+/Users/macuser
+tiggys-macbook:~ macuser$ 
+
+
+
+==========
+10. Type:
+
+$ cd -
+$ pwd
+
+Copy and paste the output below.
+----------
+/Users/macuser/mtec1002/food
+tiggys-macbook:food macuser$ 
+
+ 
+==========
+11. Type:
+
+$ cd ../../../..
+$ pwd
+
+Copy and paste the output below.
+----------
+/
+tiggys-macbook:/ macuser$ 
+
+
+
+==========
+12. Type:
+
+$ ls -l
+$ rmdir animals
+$ ls -l
+
+Copy and paste the first two lines from the output into the space below.
+----------
+Applications
+Library
+Network
+System
+Users
+Volumes
+Zipeg
+bin
+cores
+dev
+etc
+home
+mach_kernel
+net
+private
+sbin
+tmp
+usr
+var
+tiggys-macbook:/ macuser$ 
+
+
+
+==========
+13. Type:
+
+$ cd ~
+$ pwd
+
+Copy and paste the output into the space below.
+----------
+/Users/macuser
+tiggys-macbook:~ macuser$ 
+
+
+
+==========
+14. Type:
+
+$ cd /Volumes
+$ pwd
+
+Copy and paste the output into the space below.
+----------
+/Volumes
+tiggys-macbook:Volumes macuser$ 
+
+==========
+15. Type:
+
+$ cd /unknown_folder
+$ pwd
+
+Copy and paste the output into the space below.
+----------
+/Volumes
+tiggys-macbook:Volumes macuser$ 
+
+
+
+==========
+16. Type:
+
+$ cd ~/mtec1002
+$ pwd
+
+Copy and paste the output into the space below.
+----------
+/Users/macuser/mtec1002
+tiggys-macbook:mtec1002 macuser$ 
+
+
+
+==========
+17. Type:
+
+$ hostname
+
+Copy and paste the output into the space below.
+----------
+tiggys-macbook.home
+tiggys-macbook:mtec1002 macuser$ 
+
+
+
+==========
+18a. Make sure you're back in your mtec1002, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
+----------
+
+pwd
+
+==========
+18b. If you're not in the right directory, type the following command:
+
+cd ~/mtec1002
+
+Otherwise skip this question/step!
+----------
+
+
+
+==========
+19. Create the following directories, with each one inside each other.  The first one, pinapple, is the inner most:
+
+pineapple
+orange
+strawberry
+lemon
+
+Use only one command to make all of these new directories.  Write what command you used below:
+----------
+mkdir -p pineapple/orange/strawberry/lemon
+
+
+==========
+20. Make another directory called aardvark.  
+
+Write the command you used to create the directory below:
+----------
+mkdir aardvark
+
+
+==========
+21. List the files and directories in the current directory using the long format.  
+
+What is the modified date of the aardvark directory?
+----------
+aardvark
+animals
+foo
+food
+pineapple
+
+
+
+==========
+22. Make 3 directories nested within each other:
+
+* foo should be the outermost directory
+* bar should be the inside foo
+* baz should be inside bar
+
+What command did you use?
+----------
+
+mkdir -p foo/bar/baz
+
+==========
+23. Change your directory so that you're in the inner most directory (baz)
+
+What command did you use?
+----------
+
+cd baz
+
+==========
+24. Change your directory so that you're two directories up (foo)
+
+What command did you use?
+----------
+<up><up>
+
+==========
+25. What command is used to delete empty directories?
+----------
+rmdir
+
+
+==========
+26. What command is used to print out your current working directory?
+----------
+
+pwd
+
+==========
+27. What flag do I pass to ls to print out all files?
+----------
+-1
+
+
+==========
+28. What's the shortcut for home directory?
+----------
+
+hostname
+
+==========
+29. What's a pathname?
+----------
+the general form of the name of a file or directory
+
+==========
+30. What's a directory?
+----------
+cataloging structure on a file system that references other files 
+
+
+==========
+31. What's the *absolute* path (full path, starting at root) to your user's Downloads directory?
+----------
+pushd
