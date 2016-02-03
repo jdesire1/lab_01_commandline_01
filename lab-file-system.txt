@@ -120,8 +120,8 @@ $ ls -l
 Copy and paste the first two lines from the output into the space below.
 ----------
 total 0
-drwxr-xr-x  3 student  staff  102 Feb 23 15:08 foo
-
+drwxr-xr-x  3 student  staff  102 Feb  3 12:24 foo
+drwxr-xr-x  2 student  staff   68 Feb  3 12:23 food
 
 
 ==========
@@ -144,8 +144,6 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 /Volumes
-ent-v321-007:Volumes student$ 
-
 
 
 ==========
@@ -157,8 +155,6 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 /Volumes
-ent-v321-007:Volumes student$ 
-
 
 
 ==========
@@ -170,8 +166,6 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 /Users/student/mtec1003
-ent-v321-007:mtec1003 student$ 
-
 
 
 ==========
@@ -181,17 +175,13 @@ $ hostname
 
 Copy and paste the output into the space below.
 ----------
-ent-v321-007.local
-ent-v321-007:mtec1003 student$ 
-
+ent-v314-007.local
 
 
 ==========
 18a. Make sure you're back in your mtec1003, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
 ----------
 pwd
-/Users/student/mtec1003
-ent-v321-007:mtec1003 student$ 
 
 
 ==========
@@ -214,7 +204,7 @@ lemon
 
 Use only one command to make all of these new directories.  Write what command you used below:
 ----------
-mkdir pineapple/orange/strawberry/lemon
+mkdir lemon/strawberry/orange/pineapple
 
 
 ==========
@@ -230,7 +220,7 @@ mkdir aardvark
 
 What is the modified date of the aardvark directory?
 ----------
-Feb 23 15:20
+Feb  3 12:35
 
 
 ==========
@@ -242,7 +232,7 @@ Feb 23 15:20
 
 What command did you use?
 ----------
-ls foo
+mkdir foo/bar/baz
 
 
 ==========
@@ -250,9 +240,9 @@ ls foo
 
 What command did you use?
 ----------
+cd foo
+cd bar
 cd baz
-
-
 
 ==========
 24. Change your directory so that you're two directories up (foo)
@@ -275,8 +265,8 @@ pwd
 
 ==========
 27. What flag do I pass to ls to print out all files?
------------
--alt Desktop
+----------
+ls 
 
 
 ==========
@@ -288,13 +278,13 @@ pwd
 ==========
 29. What's a pathname?
 ----------
-the general form of the name of a file or directory; it specifies a unique location in a file system
+The general form of the name of a file or directory.
 
 
 ==========
 30. What's a directory?
 ----------
-a cataloging structure on a file system that refrences other files
+A cataloging structure on a file system that references other files.
 
 
 ==========
