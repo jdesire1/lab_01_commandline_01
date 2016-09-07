@@ -154,6 +154,7 @@ Copy and paste the output below.
 
 Copy and paste the output below.
 ----------
+
 -bash: foo: command not found
 
 
